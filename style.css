@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 900px;
   margin: auto;
   background: white;
   padding: 30px;
@@ -15,15 +15,19 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,.15);
 }
 
+/* これ追加 */
 #board {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin: 30px 0;
+  min-height: 320px;   /* ←重要 */
 }
 
 .row {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-bottom: 6px;
 }
 
 .tile {
@@ -31,8 +35,9 @@ body {
   height: 42px;
   min-width: 42px;
   min-height: 42px;
+
+  border: 2px solid #cbd5e1;
   border-radius: 8px;
-  border: 1px solid #ccc;
 
   display: flex;
   align-items: center;
@@ -44,23 +49,26 @@ body {
   box-sizing: border-box;
 }
 
+.empty {
+  background: white;
+}
+
 .correct {
   background: #22c55e;
   color: white;
+  border-color: #22c55e;
 }
 
 .present {
   background: #eab308;
   color: white;
+  border-color: #eab308;
 }
 
 .absent {
   background: #64748b;
   color: white;
-}
-
-.empty {
-  background: white;
+  border-color: #64748b;
 }
 
 .controls {

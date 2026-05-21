@@ -142,7 +142,7 @@ const defaultWords = `
 ラピヌ
 コルボー
 ミヌゥ
-`; // ←ここに全部貼る
+`; // 
 
 function normalizeWords(text) {
   return [...new Set(
@@ -254,7 +254,7 @@ function submitGuess() {
   input.value = "";
 
   if (scored.solved) {
-    setMessage("正解！🎉");
+    setMessage("正解！");
   } else if (history.length >= MAX_TRIES) {
     setMessage(`ゲーム終了。答え: ${answer}`);
   } else {
