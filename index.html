@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>カタカナ Wordle</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>カタカナ Wordle（固定11マス）</h1>
+
+    <div id="board"></div>
+
+    <div class="controls">
+      <input
+        id="guessInput"
+        type="text"
+        maxlength="11"
+        placeholder="キャラクター名を入力"
+      />
+      <button id="submitBtn">送信</button>
+      <button id="resetBtn">↻</button>
+    </div>
+
+    <p id="message"></p>
+    <p id="wordCount"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
