@@ -200,6 +200,7 @@ function scoreGuess(rawGuess, answer) {
 }
 
 function drawBoard() {
+  console.log("drawBoard called");
   const board = document.getElementById("board");
   board.innerHTML = "";
 
