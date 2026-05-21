@@ -211,7 +211,7 @@ function drawBoard() {
 
     for (let i = 0; i < BOARD_LEN; i++) {
       const tile = document.createElement("div");
-      tile.className = "tile";
+      tile.classList.add("tile");
 
       if (item) {
         tile.classList.add(item.result[i]);
@@ -219,6 +219,7 @@ function drawBoard() {
           item.padded[i] === BLANK ? "" : item.padded[i];
       } else {
         tile.classList.add("empty");
+        tile.textContent = "";   // ←重要
       }
 
       row.appendChild(tile);
